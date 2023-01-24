@@ -1,0 +1,102 @@
+@import "../../baseStyles/variables";
+
+.header {
+  padding: $offset 0;
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    text-align: center;
+    padding-bottom: $offset-m;
+    font-size: 32px;
+  }
+}
+
+.add {
+  display: flex;
+  align-items: center;
+  background-color: $item-bg;
+  border: $border;
+  border-radius: 22px;
+  height: 50px;
+  padding: 0 $offset-m;
+  color: #fff;
+
+  &:hover {
+    color: $hover;
+
+    .icon-plus {
+      path {
+        stroke: $hover;
+      }
+    }
+  }
+}
+
+.icon-plus {
+  path {
+    stroke: #fff;
+  }
+}
+
+.search-block{
+  width: 300px;
+  height: 50px;
+  margin-left: auto;
+
+  &__inner{
+    width: 300px;
+    white-space: nowrap;
+    position: relative;
+
+    &:hover {
+      .icon-search {
+        path {
+          stroke: $hover;
+        }
+      }
+
+      .search-block__input {
+        width: 300px;
+      }
+    }
+  }
+
+  &__input {
+    width: 50px;
+    height: 50px;
+    background: $item-bg;
+    border: $border;
+    font-size: 14px;
+    float: right;
+    padding-left: 40px;
+    border-radius: 22px;
+    color: #fff;
+    transition: width .55s ease;
+
+    &::-webkit-input-placeholder {
+      color: $hover;
+    }
+
+    &:active, &:focus {
+      outline:none;
+      width: 300px;
+    }
+  }
+
+  .icon-search {
+    position: absolute;
+    right: 14px;
+    margin-top: 14px;
+    z-index: 1;
+    cursor: pointer;
+
+    path {
+      stroke: #fff;
+    }
+  }
+}

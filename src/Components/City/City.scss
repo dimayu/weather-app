@@ -4,4 +4,62 @@
   background-color: $item-bg;
   border: $border;
   border-radius: 22px;
+  padding: $offset;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  
+  &__bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    filter: opacity(.3);
+    z-index: 1;
+  }
+
+  &__header {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &--loc {
+      display: flex;
+      align-items: center;
+
+      h2 {
+        font-size: 24px;
+        margin-left: $offset-m;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+
+    &--temp {
+      font-size: 48px;
+    }
+
+    &--date {
+      margin: $offset-m 0;
+
+      span {
+        margin-right: $offset-m;
+        font-size: 24px;
+      }
+    }
+
+    &--time {
+      span {
+        &:nth-child(1) {
+          margin-right: $offset-x;
+        }
+      }
+    }
+  }
 }
